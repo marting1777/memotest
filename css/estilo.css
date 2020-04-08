@@ -14,13 +14,24 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 10000000;
+	z-index: 10;
 }
 
 #modal button, #modal1 button, #modal2 button, #modal3 button, #modal4 button, #modal5 button, #modal6 button, #modal7 button {
-	border: none;
-    font-size: 24px;
+	position: absolute;
     cursor: pointer;
+    right: 15px;
+    bottom: 15px;
+    font-weight: bold;
+    color: #0a519d;
+    border: 1px solid #0a519d;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+#modal button:hover, #modal1 button:hover, #modal2 button:hover, #modal3 button:hover, #modal4 button:hover, #modal5 button:hover, #modal6 button:hover, #modal7 button:hover {
+	background-color: #0a519d;
+	color: #fff;
 }
 
 .modal-question {
@@ -31,6 +42,7 @@
 	padding: 10px 30px;
 	display: table;
 	margin: 20vh auto;
+	position: relative;
 }
 
 .modal-alineado {
@@ -135,4 +147,34 @@ body{
 	text-transform: uppercase;
 	border-radius: 4px;
 	padding: 0 10px;
+	margin: 20px auto;
+}
+
+.pregunta {
+	width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.mensaje-de-exito {
+	z-index: 3;
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(10, 81, 157, 0.8);
+}
+
+.mensaje-alineado {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.felicitaciones {
+	font-size: 50px;
+	text-align: center;
+	padding-top: 50px;
+	color: #fff;
 }

@@ -22,7 +22,6 @@ function crearImagenes () {
 	shuffle(arrayImagenes);
 }
 
-
 /* Shuffle del array */
 function shuffle (array) {
 	let i = array.length;
@@ -34,13 +33,13 @@ function shuffle (array) {
 	}
 }
 
-		
+
 /* Ejecuta el juego */	
 function jugar () {			
 	crearImagenes();
 	document.getElementById('memotest').style.display = "block";
-	document.getElementById("jugador1").style.color = "#03BF35";
 	document.getElementById("jugar").style.display = "none";
+	document.getElementById("jugarnuevamente").style.display = "none";
 }
 
 function imgcheck (imagen){
@@ -63,11 +62,10 @@ function imgcheck (imagen){
 			total++;
 
 			(arrayImagenes[pid] === 'img/2.png' && arrayImagenes[id] === 'img/2.png') ? setTimeout(() => document.getElementById("modal1").style.display = "block", 500) : null;
-			(arrayImagenes[pid] === 'img/3.png' && arrayImagenes[id] === 'img/3.png') ? setTimeout(() => document.getElementById("modal7").style.display = "block", 500) : null;
 			(arrayImagenes[pid] === 'img/4.png' && arrayImagenes[id] === 'img/4.png') ? setTimeout(() => document.getElementById("modal5").style.display = "block", 500) : null;
 			(arrayImagenes[pid] === 'img/5.png' && arrayImagenes[id] === 'img/5.png') ? setTimeout(() => document.getElementById("modal2").style.display = "block", 500) : null;
 			(arrayImagenes[pid] === 'img/7.png' && arrayImagenes[id] === 'img/7.png') ? setTimeout(() => document.getElementById("modal6").style.display = "block", 500) : null;
-			(arrayImagenes[pid] === 'img/8.png' && arrayImagenes[id] === 'img/8.png') ? setTimeout(() => document.getElementById("modal4").style.display = "block", 500) : null;
+			(arrayImagenes[pid] === 'img/8.png' && arrayImagenes[id] === 'img/8.png' || arrayImagenes[pid] === 'img/3.png' && arrayImagenes[id] === 'img/3.png') ? setTimeout(() => document.getElementById("modal4").style.display = "block", 500) : null;
 			(arrayImagenes[pid] === 'img/9.png' && arrayImagenes[id] === 'img/9.png') ? setTimeout(() => document.getElementById("modal").style.display = "block", 500) : null;
 			(arrayImagenes[pid] === 'img/12.png' && arrayImagenes[id] === 'img/12.png') ? setTimeout(() => document.getElementById("modal3").style.display = "block", 500) : null;
 
@@ -81,7 +79,9 @@ function imgcheck (imagen){
 		
 			//Si termina el juego
 			if (total == 14){
-				document.getElementById("jugarnuevamente").style.display = "block";
+				setTimeout(() => document.getElementById("jugarnuevamente").style.display = "block", 700);
+				setTimeout(() => document.querySelector(".mensaje-de-exito").style.display = "table", 700);
+
 				ganador = finjuego(j1, j2);
 			}		
 			//elimina el onclick si ya fueron encontrados
@@ -104,7 +104,6 @@ function imgcheck (imagen){
 		}	
 	}
 }
-
 
 let changeimages = function(imagen) {
 	imagen.src = path + "LogoZurich.png";
@@ -145,5 +144,4 @@ function cerrarModal () {
 	document.getElementById("modal4").style.display = "none";
 	document.getElementById("modal5").style.display = "none";
 	document.getElementById("modal6").style.display = "none";
-	document.getElementById("modal7").style.display = "none";
 }
