@@ -10,9 +10,9 @@
 	
 
 <body>
-	<button type="button" id="jugarnuevamente" style="display:none" onclick='jugar()'>Jugar nuevamente</button>
+	<button type="button" id="jugarnuevamente" onclick='jugar()'>Jugar nuevamente</button>
 	<h1 class="titulo">Memotest</h1>
-	<div id="anotador">
+	<div id="anotador" style="display: none;">
 		<div id="jugador1">EQUIPO 1: <span id="j1">0</span></div>
 		<div id="jugador2">EQUIPO 2: <span id="j2">0</span></div>
 	</div>
@@ -47,14 +47,6 @@
 		<div class="card"><img src="img/LogoZurich.png" id="25" onclick='imgcheck(this)'/></div>
 		<div class="card"><img src="img/LogoZurich.png" id="26" onclick='imgcheck(this)'/></div>	
 		<div class="card"><img src="img/LogoZurich.png" id="27" onclick='imgcheck(this)'/></div>
-		<div class="card"><img src="img/LogoZurich.png" id="28" onclick='imgcheck(this)'/></div>
-		<div class="card"><img src="img/LogoZurich.png" id="29" onclick='imgcheck(this)'/></div>
-		<div class="card"><img src="img/LogoZurich.png" id="30" onclick='imgcheck(this)'/></div>
-		<div class="card"><img src="img/LogoZurich.png" id="31" onclick='imgcheck(this)'/></div>
-		<div class="card"><img src="img/LogoZurich.png" id="32" onclick='imgcheck(this)'/></div>
-		<div class="card"><img src="img/LogoZurich.png" id="33" onclick='imgcheck(this)'/></div>
-		<div class="card"><img src="img/LogoZurich.png" id="34" onclick='imgcheck(this)'/></div>
-		<div class="card"><img src="img/LogoZurich.png" id="35" onclick='imgcheck(this)'/></div>
 	</div>
 	<div style="display: table; width: 100%">
 		<div style="display: table-cell; vertical-align: middle">
@@ -65,7 +57,71 @@
 		<div class="modal-question">
 			<div class="modal-alineado">
 				<img src="img/9.png" style="width: 100px" />
-				<p>Nuestro Cliente Sr.X, se está mudando a un nuevo domicilio.<br>En el trayecto, 2 de sus equipos se rompieron, por eso, llama a la Cia para que se los reparen.<br>¿Cómo se comporta la cobertura en este caso?</p>
+				<p>Luego de escuchar el relato, resolver:<br><br>¿Cómo se comporta la cobertura en este caso?</p>
+			</div>
+			<button onclick="cerrarModal()">X</button>
+		</div>
+	</div>
+	<div id="modal1">
+		<div class="modal-question">
+			<div class="modal-alineado">
+				<img src="img/2.png" style="width: 100px" />
+				<p>Cobertura Full Service<br><br>El equipo deberá mencionar 2 exenciones.</p>
+			</div>
+			<button onclick="cerrarModal()">X</button>
+		</div>
+	</div>
+	<div id="modal2">
+		<div class="modal-question">
+			<div class="modal-alineado">
+				<img src="img/5.png" style="width: 100px" />
+				<p>Los niños golpean el descodificador y lo rompen.<br><br>¿Está cubierto por la Compañía?</p>
+			</div>
+			<button onclick="cerrarModal()">X</button>
+		</div>
+	</div>
+	<div id="modal3">
+		<div class="modal-question">
+			<div class="modal-alineado">
+				<img src="img/12.png" style="width: 100px" />
+				<p>Una tormenta provoca que el hometheatre conectado se queme.<br><br>¿Como se comporta la cobertura en esta situación?</p>
+			</div>
+			<button onclick="cerrarModal()">X</button>
+		</div>
+	</div>
+	<div id="modal4">
+		<div class="modal-question">
+			<div class="modal-alineado">
+				<img src="img/8.png" style="width: 100px" />
+				<p>¿Verdadero o Falso? <br><br> - Las llamadas donde los clientes manifiestan desperfecto con el descodificador,
+					toman la cobertura de manera más rápida y sin objeciones.</p>
+			</div>
+			<button onclick="cerrarModal()">X</button>
+		</div>
+	</div>
+	<div id="modal5">
+		<div class="modal-question">
+			<div class="modal-alineado">
+				<img src="img/4.png" style="width: 100px" />
+				<p>FULL SERVICE<br><br>Mencionar 2 características de la cobertura.</p>
+			</div>
+			<button onclick="cerrarModal()">X</button>
+		</div>
+	</div>
+	<div id="modal6">
+		<div class="modal-question">
+			<div class="modal-alineado">
+				<img src="img/7.png" style="width: 100px" />
+				<p>¿Qué cantidad de eventos cubre el daño accidental de los equipos, cuántos equipos cubre?</p>
+			</div>
+			<button onclick="cerrarModal()">X</button>
+		</div>
+	</div>
+	<div id="modal7">
+		<div class="modal-question">
+			<div class="modal-alineado">
+				<img src="img/3.png" style="width: 100px" />
+				<p>¿Cómo se comporta la cobertura de Directv frente a los seguros de hogar?</p>
 			</div>
 			<button onclick="cerrarModal()">X</button>
 		</div>

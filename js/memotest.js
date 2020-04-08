@@ -1,6 +1,6 @@
 //letiables
 let path = "img/";
-arrayImagenes = new Array(36);
+arrayImagenes = new Array(28);
 let first = true;
 let turno = 0;
 let j1 = 0;
@@ -11,11 +11,11 @@ let ganador = 0;
 
 /* Crea el array con el path de la imagen */
 function crearImagenes () {
-	for (let i = 0; i <= 35; i++) {
-		if (i <= 17){
+	for (let i = 0; i <= 27; i++) {
+		if (i <= 13){
 			arrayImagenes[i] = path + i + '.png';
 		} else {
-			j = i - 18;
+			j = i - 14;
 			arrayImagenes[i] = path + j + '.png';		
 		}
 	}
@@ -62,9 +62,14 @@ function imgcheck (imagen){
 			
 			total++;
 
-			if (arrayImagenes[pid] === 'img/9.png' && arrayImagenes[id] === 'img/9.png') {
-				document.getElementById("modal").style.display = "block";
-			}
+			(arrayImagenes[pid] === 'img/2.png' && arrayImagenes[id] === 'img/2.png') ? setTimeout(() => document.getElementById("modal1").style.display = "block", 500) : null;
+			(arrayImagenes[pid] === 'img/3.png' && arrayImagenes[id] === 'img/3.png') ? setTimeout(() => document.getElementById("modal7").style.display = "block", 500) : null;
+			(arrayImagenes[pid] === 'img/4.png' && arrayImagenes[id] === 'img/4.png') ? setTimeout(() => document.getElementById("modal5").style.display = "block", 500) : null;
+			(arrayImagenes[pid] === 'img/5.png' && arrayImagenes[id] === 'img/5.png') ? setTimeout(() => document.getElementById("modal2").style.display = "block", 500) : null;
+			(arrayImagenes[pid] === 'img/7.png' && arrayImagenes[id] === 'img/7.png') ? setTimeout(() => document.getElementById("modal6").style.display = "block", 500) : null;
+			(arrayImagenes[pid] === 'img/8.png' && arrayImagenes[id] === 'img/8.png') ? setTimeout(() => document.getElementById("modal4").style.display = "block", 500) : null;
+			(arrayImagenes[pid] === 'img/9.png' && arrayImagenes[id] === 'img/9.png') ? setTimeout(() => document.getElementById("modal").style.display = "block", 500) : null;
+			(arrayImagenes[pid] === 'img/12.png' && arrayImagenes[id] === 'img/12.png') ? setTimeout(() => document.getElementById("modal3").style.display = "block", 500) : null;
 
 			if (jugador == 1){
 				j1 = j1 + 1;
@@ -75,7 +80,8 @@ function imgcheck (imagen){
 			}
 		
 			//Si termina el juego
-			if (total == 18){
+			if (total == 14){
+				document.getElementById("jugarnuevamente").style.display = "block";
 				ganador = finjuego(j1, j2);
 			}		
 			//elimina el onclick si ya fueron encontrados
@@ -133,4 +139,11 @@ function finjuego(j1, j2) {
 
 function cerrarModal () {
 	document.getElementById("modal").style.display = "none";
+	document.getElementById("modal1").style.display = "none";
+	document.getElementById("modal2").style.display = "none";
+	document.getElementById("modal3").style.display = "none";
+	document.getElementById("modal4").style.display = "none";
+	document.getElementById("modal5").style.display = "none";
+	document.getElementById("modal6").style.display = "none";
+	document.getElementById("modal7").style.display = "none";
 }
