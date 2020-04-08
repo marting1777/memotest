@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#modal {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10000000;
+}
+
+#modal button {
+	border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-question {
+	width: 800px;
+	height: 300px;
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px 30px;
+	display: table;
+	margin: 20vh auto;
+}
+
+.modal-alineado {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 24px;
+	color: #0a519d;
+	line-height: 40px;
+}
+
+td {
+	width: 100px;
+    height: 200px;
+	padding: 10px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+body{
+    background-position: top right;
+    background-repeat: no-repeat;
+	font-size: 75%;
+	background-color: #0a519d;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.titulo {
+	font-size: 54px;
+	text-align: center;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#memotest .card {
+	width: 170px;
+    margin: 10px;
+    height: 180px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 10px;
+    float: left;
+    display: flex;
+	align-items: center;
+	background-color: #fff;
+}
+
+#memotest img{
+	width: 70%;
+    margin: 0 auto;
+}
+
+#memotest{
+	color:white;
+	font-size:35px;
+	font-size: Helvetica,sans-serif;
+	margin-left:0;
+	width: 91%;
+	padding-top:10px;
+	padding-left:10px;
+	text-align:center;
+	position:relative;
+	margin: 0 auto;
+}
+
+#anotador{
+	color: #fff;
+    padding: 25px 0 5px 110px;
+    font-size: 30px;
+    position: absolute;
+    top: -17px;
+}
+#anotador span{
+	font-weight:bold;
+	color:white;
+	text-shadow: 0px 0px 4px #0fff17;
+	filter: dropshadow(color=#0fff17, offx=0, offy=0);     
+}
+
+#jugar{
+	display: block;
+	width: 200px;
+	height:50px;
+	margin: 0 auto;
+	color: #000;
+	cursor:pointer;
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 4px;
+}
