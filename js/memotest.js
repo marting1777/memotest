@@ -39,7 +39,6 @@ function jugar () {
 	crearImagenes();
 	document.getElementById('memotest').style.display = "block";
 	document.getElementById("jugar").style.display = "none";
-	document.getElementById("jugarnuevamente").style.display = "none";
 }
 
 function imgcheck (imagen){
@@ -79,7 +78,6 @@ function imgcheck (imagen){
 		
 			//Si termina el juego
 			if (total == 14){
-				setTimeout(() => document.getElementById("jugarnuevamente").style.display = "block", 700);
 				setTimeout(() => document.querySelector(".mensaje-de-exito").style.display = "table", 700);
 
 				ganador = finjuego(j1, j2);
